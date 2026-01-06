@@ -8,7 +8,11 @@
     "start": "node server.js",
     "dev": "node --watch server.js"
   },
-  "keywords": ["feedback", "ai", "api"],
+  "keywords": [
+    "feedback",
+    "ai",
+    "api"
+  ],
   "author": "",
   "license": "ISC",
   "dependencies": {
@@ -16,6 +20,6 @@
     "mongoose": "^8.0.3",
     "cors": "^2.8.5",
     "dotenv": "^16.3.1",
-    "@google/generative-ai": "^0.1.3"
+    "@google/generative-ai": "^0.21.0"
   }
 }
