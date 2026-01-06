@@ -1,0 +1,55 @@
+.star-rating {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    margin: 1.5rem 0;
+}
+
+.star {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.25rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    color: var(--text-secondary);
+    position: relative;
+}
+
+.star:hover {
+    transform: scale(1.2) rotate(5deg);
+}
+
+.star.active {
+    color: #fbbf24;
+    filter: drop-shadow(0 0 8px rgba(251, 191, 36, 0.5));
+}
+
+.star.active svg {
+    fill: currentColor;
+}
+
+.star:focus {
+    outline: none;
+}
+
+.star:focus-visible {
+    outline: 2px solid #fbbf24;
+    outline-offset: 4px;
+    border-radius: 4px;
+}
+
+@keyframes starPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+}
+
+.star.active {
+    animation: starPulse 0.5s ease;
+}
